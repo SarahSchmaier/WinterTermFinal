@@ -1,0 +1,82 @@
+.section img {
+	width: 250px;
+	height: 500px;
+}
+
+#pagepiling {
+	margin-left: 0px;
+}
+
+.navbar {
+    background-color: darkblue;
+    border: 1px solid black;
+    font-family: Trebuchet MS;
+    box-shadow: 0px 0px 10px black;
+    margin-bottom: 1%;
+}
+
+.navbar li a {
+	color: white;
+}
+
+.navbar li a:hover {
+	background-color: lightblue;
+	box-shadow: 0px 0px 25px black;
+}
+
+.active {
+	background-color: lightblue;
+}
+
+.dropdown-menu {
+	background-color: lightseagreen;
+}
+
+.icon-bar {
+	background-color: black;
+}
+
+.title {
+	text-align: center;
+	font-family: Futura;
+	text-shadow: 1px 3px blue;
+	font-size: 100px;
+}
+
+h1:hover {
+	text-shadow: 1px 1px 2px lightblue, 0 0 25px lightblue, 0 0 5px lightblue;
+}
+
+.col-grid {
+	overflow: hidden;
+	height: 650px;
+	margin: auto;
+}
+
+.col-grid img {
+	height: 60%;
+	width: 100%;
+	overflow: hidden;
+	border: solid black 1px;
+	margin-top: 5%;
+}
+
+.col-grid img:hover {
+	box-shadow: 0px 0px 25px black;
+}
+
+.arttext {
+	font-family: Trebuchet MS;
+}
+
+button {
+	margin-left: 33%;
+	font-family: Trebuchet MS;
+	background-color: pink;
+}
+
+.modal-body img {
+	width: 100%;
+}
+
+

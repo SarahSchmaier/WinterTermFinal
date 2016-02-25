@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+
+<div class="col-md-6 col-grid">
+      <img src="static/images/AlexaPagano.jpg" >
+      <br>
+      <br>
+      <p class="arttext text-center">Alexa Pagano '16</p>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Full Size Image</button>
+    </div>
+
+    <div class="col-md-6 col-grid">
+      <img src="static/images/AlexBidwell.jpg" >
+      <br>
+      <br>
+      <p class="arttext text-center">Alex Bidwell '17</p>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Full Size Image</button>
+    </div>
+
+    <div class="col-md-6 col-grid">
+      <img src="static/images/CharlotteStandefer.jpg">
+      <br>
+      <br>
+      <p class="arttext text-center">Charlotte Standefer '16</p>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Full Size Image</button>
+    </div>
+
+    <div class="col-md-6 col-grid">
+      <img src="static/images/SarahAlice.jpg">
+      <br>
+      <br>
+      <p class="arttext text-center">Alice Ahn '16 and Sarah Schmaier '16</p>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Full Size Image</button>
+    </div>
+
+   <!-- Used the modal technique from W3 schools, added JS + Jquery to switch images each time -->
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+          </div>
+          <div class="modal-body">
+            <img src="#"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+	</body>
