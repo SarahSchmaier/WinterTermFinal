@@ -4,23 +4,22 @@ var names = [["ChloeSarah", "My friend, on the left, and I in front of my dorm: 
 
 var posttext = [["About Me", "Hi everyone, I am Sarah Schmaier, a four year senior from San Francisco California. I made this website to show a student's perspective of Phillips Academy and its resources."], ["Fun & Games", "Some events at P.A. include the first formal dance of fall term, usually called Sadie Hawkins but renamed Abbot Ball this year."], ["fred", "ginger"]];
 
+var anchornames = [];
+
 $(document).ready(function () {
 	for (var i = 0; i<names.length; i++) {
 		var name = names[i];
 		console.log(name);
+        var sectionId = "page" + i.toString();
+        anchornames.push(sectionId);
 		var sectiondiv = $("<div/>", {
 			class: "section",
-			id: name[0],
+			id: sectionId,
 		}).appendTo("#pagepiling");
 	//Appended to external JQuery file library called "pagepiling" for parallax scrolling
-		var coldiv1 = $("<div/>", {
+        var coldiv1 = $("<div/>", {
 			class: "col-xs-6",
 		}).appendTo(sectiondiv);
-		//var menu = $("<ul/>", {
-			//id: "myMenu" }).appendTo(coldiv1);
-       // var menulink = $("<li/>", {
-            //class: "menuElements"
-			//}).appendTo(menu);
 		var coldiv2 = $("<div/>", {
 			class: "col-xs-6",
 		}).appendTo(sectiondiv);
@@ -45,7 +44,9 @@ $(document).ready(function () {
 		$(this).children(".textdiv").toggle();
 	});
     $('#pagepiling').pagepiling({
-    	 verticalCentered: true,
+        verticalCentered: true,
+        anchors: anchornames,
+        menu: '#myMenu',
     });
 //    $(window).onmousewheel(function(){
 //		$(".container").hide();
