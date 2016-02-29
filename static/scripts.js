@@ -9,7 +9,6 @@ var anchornames = [];
 $(document).ready(function () {
 	for (var i = 0; i<names.length; i++) {
 		var name = names[i];
-		console.log(name);
         var sectionId = "page" + i.toString();
         anchornames.push(sectionId);
 		var sectiondiv = $("<div/>", {
@@ -33,7 +32,8 @@ $(document).ready(function () {
 		}).html(post[1]).hide().appendTo(button);
 		var picsrc = "static/images/" + name[0] + ".jpg";
 		var pic = $("<img/>", {
-			src: picsrc
+			src: picsrc,
+            class: "postimages imageload",
 		}).appendTo(coldiv1);
 		var caption = $("<p/>", {
 			id: name[0] + "caption",
@@ -42,17 +42,35 @@ $(document).ready(function () {
 	}
 	$(".button").click(function(){
 		$(this).children(".textdiv").toggle();
+        console.log($(this).css("background-color"));
+        switch($(this).css("background-color")) {
+            case "rgb(0, 0, 0)":
+                $(this).css("background-color", "white");
+                break;
+            default:
+                $(this).css("background-color", "black");
+        }
 	});
+    $('body').mousewheel(function(event) {
+        $(".textdiv").hide();
+        $(".button").css("background-color", "white");
+    });
     $('#pagepiling').pagepiling({
         verticalCentered: true,
         anchors: anchornames,
         menu: '#myMenu',
     });
-//    $(window).onmousewheel(function(){
-//		$(".container").hide();
-//	});
-	$("section").scroll( function() {
-		console.log("scroll");
-	});
+    $(".postimages").on('load', function(){
+       if ($(this).height() > $(this).width()) {
+            $(this).addClass("tallPic");
+       }
+        else if ($(this).height() == $(this).width()) {
+            $(this).addClass("squarePic");
+        }
+        else {
+            $(this).addClass("widePic");
+        }
+        $(this).removeClass("imageload");
+    });
 });
 
