@@ -2,7 +2,12 @@
 	padding: 0;
 	margin: 0;
 }
-/* pagepiling menu css, url: http://alvarotrigo.com/pagePiling/demo.css*/
+
+#pp-nav li a {
+    border: none;
+}
+
+/* adapted from pagepiling menu css, url: http://alvarotrigo.com/pagePiling/demo.css*/
 #myMenu li {
 	display:inline-block;
 	margin: 10px;
@@ -13,19 +18,19 @@
 }
 
 #myMenu li.active{
-	background:#589;
-	background: rgba(0,0,0, 0.5);
+	background: grey;
 	color: #fff;
 }
 #myMenu li a{
 	text-decoration:none;
 	color: #000;
 }
+
 #myMenu li.active a:hover{
 	color: #000;
 }
 #myMenu li:hover{
-	background: rgba(255,255,255, 0.8);
+	background: lightgreen;
 }
 #myMenu li a,
 #myMenu li.active a{
@@ -37,34 +42,72 @@
 }
 #myMenu {
 	position:fixed;
-	top:0;
-	left:0;
-	height: 40px;
+	top: 0;
+	left: 25%;
+	height: 50px;
 	z-index: 70;
 	width: 100%;
-	padding: 0;
-	margin:0;
+	padding: 2%;
+	margin: 1%;
 }
 
 .caption {
 	font-family: Trebuchet MS;
+    font-size: 18px;
     margin-top: 1%;
+    text-align: center;
+    margin-right: 50%; 
 }
 
+/* adapted from: http://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
 .button {
-    font-weight: 500;
-    color:cadetblue;
-    display: block;
-    margin: 0 auto;
-    outline: none;
+  font-family: Trebuchet MS;
+  margin-right: 10%;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: white;
+  border: none;
+  color: green;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  outline: none;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 .textdiv {
     font-weight: 200;
 }
 
-.section {
-	padding: 2%;
+.coldiv2s {
+    margin-left: 1%;
 }
 
 .tallPic {
@@ -90,22 +133,6 @@
 
 .active {
 	background-color: lightblue;
-}
-
-
-.icon-bar {
-	background-color: black;
-}
-
-.title {
-	text-align: center;
-	font-family: Futura;
-	text-shadow: 1px 3px blue;
-	font-size: 100px;
-}
-
-h1:hover {
-	text-shadow: 1px 1px 2px lightblue, 0 0 25px lightblue, 0 0 5px lightblue;
 }
 
 

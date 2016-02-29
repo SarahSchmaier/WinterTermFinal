@@ -19,13 +19,14 @@
   <div class="container">
       <ul id="myMenu">
       <?php
-          for ($i=0; $i<3; $i++) {
+          $names = array("About Me", "Events & Traditions", "Daily Life");
+          for ($i=0; $i<count($names); $i++) {
               $sectionId = "page" . (string) $i;
-              echo "<li data-menuanchor='" . $sectionId . "'><a href='#" . $sectionId . "'>" . $sectionId . "</a></li>";
+              echo "<li data-menuanchor='" . $sectionId . "'><a href='#" . $sectionId . "'>" . $names[$i] . "</a></li>";
           }
         ?>
       </ul>
-  <div id="pagepiling">
+  <div id="pagepiling" background="static/images/fresh_snow_@2X.jpg">
 
   </div>
   </div>
@@ -33,7 +34,3 @@
 </body>
 
 </html>
-
-	</body>
-
-	</html>
